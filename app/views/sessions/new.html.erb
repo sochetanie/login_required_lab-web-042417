@@ -1,0 +1,5 @@
+<%= form_tag(sessions_path, method: "POST") do %>
+   <%= label_tag(:name, "Enter username:") %>
+   <%= text_field_tag(:name) %>
+   <%= submit_tag "login" %>
+ <% end %>

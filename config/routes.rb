@@ -1,4 +1,8 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do  
+  get '/secret', to: 'secrets#show', as: 'secret'
+  resources :sessions, only: [:new, :create]
+  get '/logout', to: 'sessions#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
